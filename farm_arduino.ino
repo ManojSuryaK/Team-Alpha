@@ -1,7 +1,7 @@
-#define smPin A0
-#define lumPin A2
-#define tempPin A4
-#define light 13
+#define smPin A0     //soil moisture input pin
+#define lumPin A2    //ldr sensor input pin
+#define tempPin A4   //temperature sensor input pin
+#define light 13     //light output
 int soil_moisture_level=0;
 int light_threshold=700;
 int luminosity=0;
@@ -13,7 +13,7 @@ void setup() {
   digitalWrite(light,LOW);
 }
 
-void soil_moisture_send()
+void soil_moisture_send()  //sending soil moisture data serially
 {
   soil_moisture_level=analogRead(smPin);
   Serial.print("s");
@@ -22,7 +22,7 @@ void soil_moisture_send()
   Serial.print("\n");
 }
 
-void luminosity_check()
+void luminosity_check()  // checking ambient lighting conditions
 {
   luminosity=analogRead(lumPin);
   if (luminosity>light_threshold){
@@ -37,7 +37,7 @@ void luminosity_check()
   Serial.print("\n");
 }
 
-void temperature_send()
+void temperature_send()  //sending temperature of the environment serially
 {
   temperature=(analogRead(tempPin)*500)/1023;
   Serial.print("t");
@@ -49,5 +49,4 @@ void loop() {
   soil_moisture_send();
   luminosity_check();
   temperature_send();
-  delay(1000);
 }
