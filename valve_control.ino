@@ -1,4 +1,5 @@
-const int A = 8 ;
+
+ const int A = 8 ;
 const int B = 9 ;
 
 void setup()
