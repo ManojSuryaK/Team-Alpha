@@ -7,5 +7,8 @@ Codes and their functionalities :
 *arduino_farm.ino code does the controlling part and sensing part(SCU) supporting control unit
 *farm_arduino.ino code moniters the farm (drip irrigation) and sending emails to the owner in certain situations from distant location 
 (RCU) remote control unit.
-*upload.py is the script utilised to upload the images and train the COGNITIVE service provide by ibm bluemix(visual recognition api).Trained around 200 captured images.
+*upload.py is the script utilised to upload the images and train the COGNITIVE service provide by ibm bluemix(visual recognition api) for pest detection.Trained around 200 captured images.
 
+link to the captured images - 
+positive set -  https://drive.google.com/open?id=0B2dG007VZRu_ZnNfZ29MS3FQdlU
+negative set -  https://drive.google.com/open?id=0B2dG007VZRu_WFdCV0t0YzZfT1k
